@@ -1,46 +1,91 @@
-# Restaurant App Backend
+# Game Filter App - Node.Js
 
-This repository contains the backend code for the Restaurant App. It provides APIs for managing restaurant data, including menus, orders, and user information.
+A secure and scalable RESTful API built with **Node.js** and **Express**. Features built-in authentication, security middleware, and comprehensive error handling.
 
-## Table of Contents
+## 🌟 Features
+* **Authentication**: Secure JWT-based authentication system
+* **Error Handling**: Comprehensive error handling middleware
+* **Environment Configuration**: Environment-based configurations using dotenv
+* **Password Encryption**: Secure password hashing using bcrypt
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
+## 🛠️ Technology Stack
+* **Runtime**: Node.js
+* **Framework**: Express.js
+* **Authentication**: JWT (jsonwebtoken)
+* **Security**: 
+  * bcrypt for password hashing
+* **Utilities**: Lodash
+* **Development**: Nodemon for hot reloading
 
-## Installation
+## 📁 Project Structure
+```
+├── src/
+│   ├── config/           # Configuration files
+│   ├── controllers/      # Request handlers
+│   ├── middleware/       # Custom middleware
+│   ├── models/          # Data models
+│   ├── routes/          # API routes
+│   ├── utils/           # Utility functions
+│   └── server.js        # Application entry point
+├── .env                 # Environment variables
+└── package.json         # Project dependencies
+```
 
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/restaurant-app-be-private.git
-    ```
-2. Navigate to the project directory:
-    ```sh
-    cd restaurant-app-be-private
-    ```
-3. Install dependencies:
-    ```sh
-    npm install
-    ```
+## 🚀 Getting Started
 
-## Usage
+1. Clone the repository and install dependencies:
+```bash
+git clone https://github.com/snishan/game-filter-app-be.git
+cd node-api
+npm install
+```
 
-1. Start the development server:
-    ```sh
-    npm start
-    ```
-2. The server will be running at `http://localhost:3000`.
+2. Checkout to the `development` brach:
+```env
+git fetch && git checkout development
+```
 
-## API Endpoints
+3. Start the development server:
+```bash
+npm run dev
+```
 
-- `GET /api/restaurants` - Get a list of all restaurants
-- `POST /api/restaurants` - Add a new restaurant
-- `GET /api/restaurants/:id` - Get details of a specific restaurant
-- `PUT /api/restaurants/:id` - Update a specific restaurant
-- `DELETE /api/restaurants/:id` - Delete a specific restaurant
+4. For production:
+```bash
+npm run build
+npm start
+```
 
-## Contributing
+## 🔐 Authentication
 
-Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first.
+The API uses JWT (JSON Web Tokens) for authentication:
+
+
+1. Login to get JWT token:
+```http
+POST /api/auth/login
+Content-Type: application/json
+
+{
+  "username": "player1",
+  "password": "player1"
+}
+```
+
+## 📚 Available Scripts
+
+* `npm start` - Start the production server
+* `npm run dev` - Start development server with hot reloading
+* `npm run build` - Build the project for production
+* `npm test` - Run tests (not implemented yet)
+
+
+## 📈 Future Improvements
+
+* Add database integration
+* Implement rate limiting
+* Add request validation
+* Set up automated testing
+* Add API documentation with Swagger
+* Implement logging system
+
