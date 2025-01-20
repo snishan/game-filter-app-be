@@ -37,12 +37,12 @@ A secure and scalable RESTful API built with **Node.js** and **Express**. Featur
 ```bash
 git clone https://github.com/snishan/game-filter-app-be.git
 cd game-filter-app-be
-npm install
 ```
 
 2. Checkout to the `development` brach:
 ```env
 git fetch && git checkout development
+npm install
 ```
 
 3. Start the development server:
